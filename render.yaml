@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: bot-cines-unidos
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false      # se escribe a mano en el panel de Render
+      - key: CHAT_IDS
+        sync: false
